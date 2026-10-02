@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davula Akhil — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">DA<span>.</span></a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#startup">Startup</a>
+      <a href="#about">About</a>
+      <a href="#stack">Stack</a>
+      <a href="mailto:akhildavula@gmail.com" class="nav-cta">Contact ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="pulse"></span>
+      Open to work
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-line">
+        <span class="hero-word" style="--i:0">I</span>
+        <span class="hero-word" style="--i:1">build</span>
+        <span class="hero-word hero-word--stroke" style="--i:2">digital</span>
+      </span>
+      <span class="hero-line">
+        <span class="hero-word hero-word--gradient" style="--i:3">experiences</span>
+        <span class="hero-word" style="--i:4">that</span>
+      </span>
+      <span class="hero-line">
+        <span class="hero-word" style="--i:5">stand</span>
+        <span class="hero-word hero-word--outline" style="--i:6">out.</span>
+      </span>
+    </h1>
+    <p class="hero-sub">
+      Davula Akhil — Full-Stack Developer, AI/ML Explorer & DevOps Practitioner based in India.
+      I design and build software that solves real-world problems with clean code and bold ideas.
+    </p>
+    <div class="hero-footer">
+      <a href="#work" class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-indicator">
+          <div class="scroll-dot"></div>
+        </div>
+      </a>
+      <div class="hero-socials">
+        <a href="https://github.com/akhil96477" target="_blank">GitHub ↗</a>
+        <a href="https://linkedin.com/in/" target="_blank">LinkedIn ↗</a>
+        <a href="mailto:akhildavula@gmail.com">Email ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KINETIC TYPOGRAPHY -->
+  <section class="kinetic-section" data-reveal>
+    <div class="kinetic-track kinetic-track--right">
+      <span>THINK ✦ BUILD ✦ SHIP ✦ THINK ✦ BUILD ✦ SHIP ✦ THINK ✦ BUILD ✦ SHIP ✦ THINK ✦ BUILD ✦ SHIP ✦ </span>
+    </div>
+    <div class="kinetic-track kinetic-track--left">
+      <span class="outline">DESIGN ✦ CODE ✦ SCALE ✦ DESIGN ✦ CODE ✦ SCALE ✦ DESIGN ✦ CODE ✦ SCALE ✦ DESIGN ✦ CODE ✦ SCALE ✦ </span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>PYTHON</span><span>★</span><span>REACT</span><span>★</span>
+      <span>JAVASCRIPT</span><span>★</span><span>JAVA</span><span>★</span>
+      <span>SPRING BOOT</span><span>★</span><span>DOCKER</span><span>★</span>
+      <span>JENKINS</span><span>★</span><span>TENSORFLOW</span><span>★</span>
+      <span>NODE.JS</span><span>★</span><span>AWS</span><span>★</span>
+      <span>PYTHON</span><span>★</span><span>REACT</span><span>★</span>
+      <span>JAVASCRIPT</span><span>★</span><span>JAVA</span><span>★</span>
+      <span>SPRING BOOT</span><span>★</span><span>DOCKER</span><span>★</span>
+      <span>JENKINS</span><span>★</span><span>TENSORFLOW</span><span>★</span>
+      <span>NODE.JS</span><span>★</span><span>AWS</span><span>★</span>
+    </div>
+  </div>
+
+  <!-- WORK / PROJECTS (Bento Grid) -->
+  <section class="section" id="work">
+    <div class="section-header">
+      <span class="section-tag">/ Selected Work</span>
+      <h2 class="section-title">Projects I've<br><em>crafted</em></h2>
+    </div>
+    <div class="bento">
+      <a href="https://github.com/akhil96477/Deep-CDG-X" target="_blank" class="bento-card bento-card--lg" data-project>
+        <div class="bento-card__bg" style="--g1:#4f46e5;--g2:#7c3aed"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">01</div>
+          <h3 class="bento-card__title">Deep-CDG-X</h3>
+          <p class="bento-card__desc">Deep learning research — neural architectures for code dependency graph analysis</p>
+          <div class="bento-card__tags">
+            <span>Python</span><span>TensorFlow</span><span>Deep Learning</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <a href="https://github.com/akhil96477/foodflow" target="_blank" class="bento-card" data-project>
+        <div class="bento-card__bg" style="--g1:#ea580c;--g2:#f97316"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">02</div>
+          <h3 class="bento-card__title">FoodFlow</h3>
+          <p class="bento-card__desc">Full-stack food delivery app with real-time tracking</p>
+          <div class="bento-card__tags">
+            <span>JavaScript</span><span>React</span><span>Node.js</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <a href="https://github.com/akhil96477/crm-intelligence-system" target="_blank" class="bento-card" data-project>
+        <div class="bento-card__bg" style="--g1:#0891b2;--g2:#06b6d4"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">03</div>
+          <h3 class="bento-card__title">CRM Intelligence</h3>
+          <p class="bento-card__desc">AI-powered CRM with predictive analytics & lead scoring</p>
+          <div class="bento-card__tags">
+            <span>Python</span><span>AI/ML</span><span>Analytics</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <a href="https://github.com/akhil96477/devops-portal" target="_blank" class="bento-card bento-card--wide" data-project>
+        <div class="bento-card__bg" style="--g1:#059669;--g2:#10b981"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">04</div>
+          <h3 class="bento-card__title">DevOps Portal</h3>
+          <p class="bento-card__desc">Centralized dashboard for CI/CD pipelines, deployments & infrastructure monitoring</p>
+          <div class="bento-card__tags">
+            <span>JavaScript</span><span>Jenkins</span><span>Docker</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <a href="https://github.com/akhil96477/react-dev-jenkins" target="_blank" class="bento-card" data-project>
+        <div class="bento-card__bg" style="--g1:#dc2626;--g2:#ef4444"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">05</div>
+          <h3 class="bento-card__title">React × Jenkins</h3>
+          <p class="bento-card__desc">React app with complete CI/CD pipeline automation</p>
+          <div class="bento-card__tags">
+            <span>React</span><span>Jenkins</span><span>CI/CD</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <a href="https://github.com/akhil96477/springboot-dev" target="_blank" class="bento-card" data-project>
+        <div class="bento-card__bg" style="--g1:#7c3aed;--g2:#a855f7"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">06</div>
+          <h3 class="bento-card__title">SpringBoot Dev</h3>
+          <p class="bento-card__desc">Production-ready microservice with RESTful APIs</p>
+          <div class="bento-card__tags">
+            <span>Java</span><span>Spring Boot</span><span>Docker</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <!-- AUISC Project -->
+      <a href="https://auisc.org" target="_blank" class="bento-card" data-project>
+        <div class="bento-card__bg" style="--g1:#2563eb;--g2:#3b82f6"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">07</div>
+          <h3 class="bento-card__title">auisc.org</h3>
+          <p class="bento-card__desc">Developed the official website for the Anurag University IUCEE Student Chapter.</p>
+          <div class="bento-card__tags">
+            <span>Web Dev</span><span>IUCEE</span><span>Community</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <!-- Fence Scan -->
+      <a href="#" class="bento-card" data-project>
+        <div class="bento-card__bg" style="--g1:#ef4444;--g2:#b91c1c"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">08</div>
+          <h3 class="bento-card__title">Fence Scan</h3>
+          <p class="bento-card__desc">IoT device utilizing ESP32 & induction coils to detect live currents and identify illegal electricity tapping, complete with a custom monitoring dashboard.</p>
+          <div class="bento-card__tags">
+            <span>IoT</span><span>ESP32</span><span>Hardware</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <!-- Smart Air AI -->
+      <a href="#" class="bento-card bento-card--wide" data-project>
+        <div class="bento-card__bg" style="--g1:#10b981;--g2:#047857"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">09</div>
+          <h3 class="bento-card__title">Smart Air AI</h3>
+          <p class="bento-card__desc">ESP32-based air quality monitor running an embedded ML model (Edge AI) to analyze real-time sensor data against real-world environmental norms.</p>
+          <div class="bento-card__tags">
+            <span>Edge AI</span><span>ESP32</span><span>Machine Learning</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <!-- Smart College -->
+      <a href="#" class="bento-card bento-card--wide" data-project>
+        <div class="bento-card__bg" style="--g1:#8b5cf6;--g2:#6d28d9"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">10</div>
+          <h3 class="bento-card__title">Smart College</h3>
+          <p class="bento-card__desc">Transformed traditional college infrastructure into a fully automated, centralized IoT-driven environment using interconnected smart devices.</p>
+          <div class="bento-card__tags">
+            <span>IoT</span><span>Automation</span><span>Smart Infra</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+
+      <!-- Teach Clone -->
+      <a href="#" class="bento-card" data-project>
+        <div class="bento-card__bg" style="--g1:#ec4899;--g2:#be185d"></div>
+        <div class="bento-card__content">
+          <div class="bento-card__watermark">11</div>
+          <h3 class="bento-card__title">Teach Clone</h3>
+          <p class="bento-card__desc">Contributed to an open-source EdTech platform clone, enhancing core learning features and UI components.</p>
+          <div class="bento-card__tags">
+            <span>EdTech</span><span>Open Source</span><span>Web</span>
+          </div>
+        </div>
+        <div class="bento-card__arrow">↗</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- STARTUP -->
+  <section class="section" id="startup">
+    <div class="section-header">
+      <span class="section-tag">/ Founder</span>
+      <h2 class="section-title">Building<br><em>communities</em></h2>
+    </div>
+    <a href="https://gaanabajaana.vercel.app" target="_blank" class="startup-banner" data-reveal>
+      <div class="startup-banner__bg"></div>
+      <div class="startup-banner__content">
+        <h3 class="startup-banner__title">Gaanabajaana</h3>
+        <p class="startup-banner__desc">
+          More than just a project — my startup community hosting major events across Hyderabad. What started as a vision has grown into a vibrant family of <strong>2,000+ members</strong> with <strong>7 successful editions</strong> organized so far.
+        </p>
+        <div class="startup-banner__stats">
+          <div class="stat">
+            <span class="stat-val">2K+</span>
+            <span class="stat-label">Members</span>
+          </div>
+          <div class="stat">
+            <span class="stat-val">07</span>
+            <span class="stat-label">Editions</span>
+          </div>
+          <div class="stat">
+            <span class="stat-val">HYD</span>
+            <span class="stat-label">Location</span>
+          </div>
+        </div>
+        <div class="startup-banner__link">Visit gaanabajaana.vercel.app ↗</div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-header">
+      <span class="section-tag">/ About</span>
+      <h2 class="section-title">A bit about<br><em>myself</em></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="about-lead">I'm a developer who believes <strong>great software is at the intersection of clean code, thoughtful design, and real impact.</strong></p>
+        <p>As an Artificial Intelligence graduate from <strong>Anurag University</strong>, I have deep expertise in Machine Learning (ML) and Deep Learning (DL). My technical journey started with Python and IoT—tinkering with hardware and automating environments.</p>
+        <p>Today, I build everything from complex deep learning research platforms to full-stack web applications, intelligent CRM systems, and CI/CD pipelines. I love connecting the dots between Edge AI hardware and the cloud.</p>
+        <p>Beyond coding, I have extensive experience in <strong>Event Management</strong>. I run my startup <strong>Gaanabajaana</strong>, serve as the <strong>Social Media Lead</strong> for the Anurag University IUCEE Student Chapter (AUISC), and explore photography and video editing in my free time.</p>
+      </div>
+      <div class="about-info">
+        <div class="info-row">
+          <span class="info-label">Location</span>
+          <span class="info-value">India 🇮🇳</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Leadership</span>
+          <span class="info-value" style="line-height:1.5;">Founder @ Gaanabajaana<br>SM Lead @ AUISC</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Focus</span>
+          <span class="info-value">AI/ML · Full-Stack · DevOps</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Languages</span>
+          <span class="info-value">Python · JavaScript · Java</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Education</span>
+          <span class="info-value">B.Tech AI @ Anurag Univ.</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Availability</span>
+          <span class="info-value available">Open to opportunities</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <div class="section-header">
+      <span class="section-tag">/ Stack</span>
+      <h2 class="section-title">Technologies I<br><em>work with</em></h2>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+        <span>Python</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        <span>JavaScript</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+        <span>Java</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+        <span>React</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" />
+        <span>Spring Boot</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+        <span>Node.js</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+        <span>Docker</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" />
+        <span>Jenkins</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />
+        <span>TensorFlow</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+        <span>Git</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+        <span>Linux</span>
+      </div>
+      <div class="stack-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" />
+        <span>AWS</span>
+      </div>
+      <div class="stack-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+        <span>Canva</span>
+      </div>
+      <div class="stack-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+        <span>Video Editing</span>
+      </div>
+      <div class="stack-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+        <span>Videography</span>
+      </div>
+      <div class="stack-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        <span>Photography</span>
+      </div>
+      <div class="stack-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+        <span>IoT Systems</span>
+      </div>
+      <div class="stack-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+        <span>ESP32 / Edge AI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section class="cta" id="contact">
+    <h2 class="cta-title">
+      <span class="cta-line">Let's work</span>
+      <span class="cta-line"><em>together.</em></span>
+    </h2>
+    <a href="mailto:akhildavula@gmail.com" class="cta-btn">
+      <span>akhildavula@gmail.com</span>
+      <span class="cta-btn__arrow">→</span>
+    </a>
+    <div class="cta-links">
+      <a href="https://github.com/akhil96477" target="_blank">GitHub</a>
+      <span>·</span>
+      <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+      <span>·</span>
+      <a href="mailto:akhildavula@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>© 2026 Davula Akhil</span>
+    <span>Built with ☕ & curiosity</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
