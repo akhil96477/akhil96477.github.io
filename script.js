@@ -1,35 +1,35 @@
 
-// ── SCRAMBLE PRELOADER ──
+// ── CINEMATIC PRELOADER ──
 window.addEventListener('load', () => {
-  const el = document.getElementById('scramble-intro');
   const preloader = document.getElementById('preloader');
-  if (!el || !preloader) return;
+  const progress = document.querySelector('.intro-progress');
+  const title = document.querySelector('.intro-title');
   
-  const finalValue = el.getAttribute('data-value');
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*";
-  let iterations = 0;
-  
-  const scrambleInterval = setInterval(() => {
-    el.innerText = finalValue.split("").map((char, index) => {
-      if (char === " ") return " ";
-      if (index < iterations) return finalValue[index];
-      return chars[Math.floor(Math.random() * chars.length)];
-    }).join("");
+  if (!preloader || !progress || !title) return;
+
+  // 1. Laser scan line shoots across screen
+  progress.style.transition = 'width 0.7s cubic-bezier(0.85, 0, 0.15, 1)';
+  progress.style.width = '100%';
+
+  setTimeout(() => {
+    progress.style.opacity = '0'; // hide line
+    title.classList.add('show'); // Fade in hollow outline text
     
-    if (iterations >= finalValue.length) {
-      clearInterval(scrambleInterval);
-      el.classList.add('glowing');
+    setTimeout(() => {
+      title.classList.add('fill'); // Neon green liquid/laser wipe fills text
       
-      // Much faster exit (minimal delay)
       setTimeout(() => {
-        preloader.classList.add('hide');
+        // Massive 3D Camera zoom-through transition
+        title.classList.add('zoom');
+        preloader.classList.add('hide'); // Fade out black background smoothly
+        
         setTimeout(() => {
           document.body.classList.remove('preloading');
-        }, 700);
-      }, 400); 
-    }
-    iterations += 1.5; // Controls the speed of the scramble
-  }, 40); 
+          preloader.style.display = 'none';
+        }, 1200);
+      }, 1400); // Wait for fill to finish + hold for maximum impact
+    }, 800); // Wait for outline to settle
+  }, 700); // Wait for scanline to finish
 });
 
 /* ================================================
