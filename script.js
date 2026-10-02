@@ -1,15 +1,35 @@
 
-// ── 3D PRELOADER ──
+// ── SCRAMBLE PRELOADER ──
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-      preloader.classList.add('hide');
+  const el = document.getElementById('scramble-intro');
+  const preloader = document.getElementById('preloader');
+  if (!el || !preloader) return;
+  
+  const finalValue = el.getAttribute('data-value');
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*";
+  let iterations = 0;
+  
+  const scrambleInterval = setInterval(() => {
+    el.innerText = finalValue.split("").map((char, index) => {
+      if (char === " ") return " ";
+      if (index < iterations) return finalValue[index];
+      return chars[Math.floor(Math.random() * chars.length)];
+    }).join("");
+    
+    if (iterations >= finalValue.length) {
+      clearInterval(scrambleInterval);
+      el.classList.add('glowing');
+      
+      // Much faster exit (minimal delay)
       setTimeout(() => {
-        document.body.classList.remove('preloading');
-      }, 1200); // Wait for slide up animation
+        preloader.classList.add('hide');
+        setTimeout(() => {
+          document.body.classList.remove('preloading');
+        }, 700);
+      }, 400); 
     }
-  }, 2200); // Show text for 2.2 seconds before sliding up
+    iterations += 1.5; // Controls the speed of the scramble
+  }, 40); 
 });
 
 /* ================================================
