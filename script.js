@@ -1,6 +1,16 @@
 
+// FAILSAFE: If preloader gets stuck for any reason, force hide it after 4 seconds
+setTimeout(() => {
+  const p = document.getElementById('preloader');
+  if (p && p.style.display !== 'none') {
+    p.style.display = 'none';
+    document.body.classList.remove('preloading');
+  }
+}, 4000);
+
 // ── CINEMATIC PRELOADER ──
-window.addEventListener('load', () => {
+// Fire immediately when DOM is parsed, don't wait for slow network resources
+document.addEventListener('DOMContentLoaded', () => {
   const preloader = document.getElementById('preloader');
   const progress = document.querySelector('.intro-progress');
   const title = document.querySelector('.intro-title');
