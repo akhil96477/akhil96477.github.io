@@ -1,3 +1,17 @@
+
+// ── 3D PRELOADER ──
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.classList.add('hide');
+      setTimeout(() => {
+        document.body.classList.remove('preloading');
+      }, 1200); // Wait for slide up animation
+    }
+  }, 2200); // Show text for 2.2 seconds before sliding up
+});
+
 /* ================================================
    DAVULA AKHIL — PORTFOLIO V2 JS
    Particle starfield · Scroll reveals · Tilt

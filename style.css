@@ -1,3 +1,65 @@
+
+/* ================================================
+   3D PRELOADER
+   ================================================ */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #050505;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#preloader.hide {
+  transform: translateY(-100vh);
+}
+
+.preloader-content {
+  display: flex;
+  gap: 1.5rem;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text-main);
+  transform-style: preserve-3d;
+}
+
+.preloader-content .word {
+  display: inline-block;
+  opacity: 0;
+  transform-origin: bottom center;
+  transform: rotateX(90deg) translateY(50px) translateZ(-200px);
+  animation: reveal3D 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.preloader-content .word.accent {
+  color: var(--primary);
+  animation-delay: 0.15s;
+}
+
+@keyframes reveal3D {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg) translateY(50px) translateZ(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0) translateZ(0);
+  }
+}
+
+/* Hide body scroll while preloading */
+body.preloading {
+  overflow: hidden;
+}
+
 /* ================================================
    DAVULA AKHIL — PORTFOLIO V2
    Premium · Bento · Particles · Bold Typography
