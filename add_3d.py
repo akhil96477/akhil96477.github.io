@@ -1,4 +1,32 @@
+import re
 
+html_path = "/Users/akhil/.gemini/antigravity/scratch/portfolio/index.html"
+with open(html_path, "r") as f:
+    html = f.read()
+
+# 1. Add Three.js to the head
+threejs_script = '<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>'
+if threejs_script not in html:
+    html = html.replace('</head>', f'  {threejs_script}\n</head>')
+
+# 2. Add 3D Scene script to the bottom
+threejs_app = '<script src="3d-scene.js"></script>'
+if threejs_app not in html:
+    html = html.replace('</body>', f'  {threejs_app}\n</body>')
+
+# 3. We will render the 3D scene directly on top of the hero, behind the text.
+# Let's add a container for it if not exists.
+canvas_div = '<div id="three-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; pointer-events: none;"></div>'
+if canvas_div not in html:
+    html = html.replace('<canvas id="particleCanvas"></canvas>', f'<canvas id="particleCanvas"></canvas>\n  {canvas_div}')
+
+with open(html_path, "w") as f:
+    f.write(html)
+
+print("Updated index.html to load Three.js")
+
+# 4. Create the 3d-scene.js file
+three_scene_js = """
 // ── THREE.JS 3D HERO ANIMATION ──
 (function() {
     const container = document.getElementById('three-container');
@@ -14,7 +42,7 @@
     // Renderer (transparent background)
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Cap pixel ratio for performance
+    renderer.setPixelRatio(window.devicePixelRatio);
     container.appendChild(renderer.domElement);
 
     // ── CREATE 3D OBJECTS ──
@@ -108,3 +136,9 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
 })();
+"""
+
+with open("/Users/akhil/.gemini/antigravity/scratch/portfolio/3d-scene.js", "w") as f:
+    f.write(three_scene_js)
+
+print("Created 3d-scene.js")

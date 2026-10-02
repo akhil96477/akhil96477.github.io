@@ -78,7 +78,7 @@ body.preloading {
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { /* scroll-behavior: smooth; removed for Lenis */ }
 body {
   font-family: var(--font);
   background: var(--bg);
